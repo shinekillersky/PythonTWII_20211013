@@ -1,5 +1,6 @@
 import 資料擷取.BWIBBU as bwi
 import sqlite3
+import time
 
 
 def create_table():
@@ -32,7 +33,9 @@ def create_record(list):
 
 
 if __name__ == '__main__':
+    # homework 將 10/11 月份的資料匯入到資料庫
     list = bwi.getData(2021, 11, 3)
     print(len(list), list)
     create_table()
     create_record(list)
+    time.sleep(20)  # 每一次爬完之後要停20秒, 避免被鎖IP
