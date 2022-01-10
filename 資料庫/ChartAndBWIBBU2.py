@@ -33,5 +33,5 @@ ax1.set_ylabel('pe', color='tab:blue')
 ax1.plot_date(x_datas, y_datas, '-')
 # 第二條線
 ax2.set_ylabel('yield', color='tab:orange')
-ax2.plot_date(x_datas, y2_datas, '-', color='orange')
+ax2.plot_date(x_datas, y2_datas, '--', color='orange')
 plt.show()
