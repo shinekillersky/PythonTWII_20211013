@@ -7,9 +7,9 @@ conn = sqlite3.connect('tw_stock.db')
 cursor = conn.cursor()
 # sql = "select ts, pe from BWIBBU where symbol='%s'" % symbol
 sql = 'select strftime("%Y-%m", ts) as "ts", ROUND(AVG(' + kind + '), 2) as "' + kind + '" ' \
-                             'from BWIBBU  '  \
-                             'where symbol="' + symbol + '" ' \
-                             'group by strftime("%Y-%m", ts)'
+      'from BWIBBU  ' \
+      'where symbol="' + symbol + '" ' \
+      'group by strftime("%Y-%m", ts)'
 
 print(sql)
 
